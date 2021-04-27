@@ -1,0 +1,580 @@
+
+/*全体　共通
+最初から設定してあるので特に変更
+しなくても大丈夫です♪
+-----------------*/
+
+/* loading setting */
+#loading {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+  z-index:35;
+  background:rgb(226, 132, 10);
+  opacity: 1;
+	animation: loading 3s linear 0s 1 both;
+
+}
+
+@keyframes loading {
+	0%{
+		opacity: 1;
+	}
+	75%{
+		opacity: 1;
+	}
+	99%{
+		opacity: 0;
+		z-index:35;
+	}
+	100%{
+		opacity: 0;
+		user-select: none;
+		z-index: -1;
+	}
+}
+
+
+body{
+	font-family: Roboto, "Yu Gothic Medium", "游ゴシック Medium", YuGothic, "游ゴシック体", "ヒラギノ角ゴ Pro W3", "メイリオ", sans-serif;
+	line-height: 1.75;
+	font-size: 16px;
+	width: 960px;
+	margin: auto;
+	background-image: url("../img/orange20apple20logo20ipad20air20220wallpapers_063890df8488097ce56c40c085b09b1f_raw.jpeg");
+	background-attachment: fixed;
+	background-position: center;
+	background-size: 960px;
+	user-select: none;
+	background-size: cover;
+	/* border-left: 5px solid orange;
+	border-right: 5px solid orange; */
+}
+
+
+/*　パディングをサイズ内側にする処理　*/
+* {
+	padding:0;
+	margin:0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+/*ーーーーーーーーーーー*/
+/*この下から記述*/
+/*ーーーーーーーーーーー*/
+
+/* common setting */
+.space_24 {
+	height: 24px;
+}
+.space_32 {
+	height: 32px;
+}
+.space_40 {
+	height: 40px;
+}
+.space_48 {
+	height: 48px;
+}
+.space_56 {
+	height: 56px;
+}
+.space_64 {
+	height: 64px;
+}
+.space_80 {
+	height: 80px;
+}
+.space_120 {
+	height: 120px;
+}
+
+.center {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+.flex_box {
+	display: flex;
+	justify-content: center; /*おまけ*/
+}
+
+.text_center {
+	text-align: center;
+}
+
+h3 {
+	color: white;
+	font-size: 24px;
+	user-select: none;
+	position: relative;
+	z-index: 26;
+}
+
+.material-icons {
+	cursor: pointer;
+}
+
+/* header setting */
+.header_container {
+	height: 500px;
+	color: white;
+	position: relative;
+	top: 0;
+	left: 0;
+	background: rgb(59, 51, 51);
+	border-top: 5px solid black;
+	border-bottom: 5px solid black;
+}
+
+.header_container h1 {
+	position: relative;
+	margin: 0;
+	font-size: 48px;
+	z-index: 10;
+	color: rgb(211, 230, 45);
+	text-shadow: #FC0 1px 0 10px;
+}
+
+.header_container p {
+	font-size: 36px;
+	z-index: 10;
+	color: rgb(211, 230, 45);
+	text-shadow: #FC0 1px 0 10px;
+}
+/* ホーム写真のアニメーション */
+.header_container ul {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	overflow: hidden;
+}
+
+.header_container ul li {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.header_container ul li:nth-child(1) {
+	opacity: 0;
+	animation: album 15s linear 0s infinite;
+}
+.header_container ul li:nth-child(2) {
+	opacity: 0;
+	animation: album 15s linear 5s infinite;
+}
+.header_container ul li:nth-child(3) {
+	opacity: 0;
+	animation: album 15s linear 10s infinite;
+}
+
+@keyframes album {
+	0%{
+ 		opacity: 0;
+	}
+	5%{
+		opacity: 0.5;
+	}
+	10%{
+		opacity: 0.8;
+	}
+	15%{
+		opacity: 1;
+	}
+	20%{
+		opacity: 1;
+	}
+	25%{
+		opacity: 0.8;
+	}
+	30%{
+ 		opacity: 0.5;
+	}
+	38%{
+		opacity: 0;
+	}
+	100%{
+ 		opacity: 0;
+	}
+}
+
+
+/* nav setting */
+
+nav {
+	font-size: 21px;
+	height: 80px;
+	border-bottom: 2px solid #efefef;
+}
+
+.main_nav ul li img {
+	margin-left: 50px;
+	margin-right: 100px;
+}
+
+.main_nav ul {
+	display: flex;
+	height: 100%;
+}
+
+.main_nav ul li {
+  margin: auto;
+}
+
+.main_nav ul li a {
+  color: black;
+}
+
+/* main setting */
+.introduction_box {
+	margin-left: 48px;
+}
+
+.introduction_box_even {
+	margin-right: 48px;
+}
+/* img loop */
+.l {
+	display: flex;
+}
+
+.loop {
+	animation: loop-slide 30s infinite linear 0.5s both;
+}
+@keyframes loop-slide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+/* コース周辺 */
+.course .flex_box:nth-child(even){
+flex-direction: row-reverse;
+}
+/* ニュース周辺 */
+.news li {
+	width: 280px;
+}
+
+.news img {
+	width: 280px;	
+}
+
+.news li:nth-child(2) {
+	margin: 0 32px;
+}
+/* more button */
+.btn {
+	width: 100%;
+	text-align: center;
+}
+#btn {
+	cursor: pointer;
+}
+#btn1 {
+	cursor: pointer;
+}
+
+button {
+	height: 60px;
+	width: 300px;
+	font-size: 21px;
+	/* background: rgba(233, 236, 0, 0.5); */
+  /* opacity: 0.5; */
+	/* border-radius: 50%; */
+}
+
+button:active {
+	opacity: 0.1;
+}
+
+.hidden_news {
+	display: none;
+	text-align: center;
+}
+/* アクセス周辺 */
+.acsess {
+	background: rgba(196, 193, 193, 0.7);
+}
+
+table {
+	text-align: left;
+	border-collapse: separate;
+	border-spacing: 0px 28px;
+}
+
+tr {
+	border-spacing: 24px 24px;
+}
+
+td {
+	padding-left: 48px;
+}
+
+.acsess td:first-child {
+	padding-left: initial;
+}
+/* コンタクト周辺 */
+.contact {
+	background: rgb(194, 194, 192);
+}
+
+.hidden_contact {
+	display: none;
+}
+
+dl dt {
+	float: left;
+	clear: both;
+	position: relative;
+	top: 2px;
+}
+
+dl dd {
+	padding-left: 120px;
+}
+
+dl dd label,
+dl dd input[type="text"],
+dl dd input[type="texterea"] {
+margin-left: 120px;
+vertical-align: middle;
+}
+
+input[type="text"] {
+	border: solid 1px #dfdfdf;
+	width: 328px;
+	height: 36px;
+}
+
+input[type="checkbox"] {
+	color: #f0ebe5;
+	height: 24px;
+	width: 24px;
+	margin-right: 40px;
+	position: relative;
+  top: -1px;
+	cursor: pointer;
+	opacity: .5;
+}
+
+textarea {
+	border: solid 1px #dfdfdf;
+	width: 328px;
+	height: 108px;
+	margin-left: 120px;
+}
+
+/* input[type="texterea"] {
+	border: solid 1px #dfdfdf;
+	width: 328px;
+	height: 108px;
+} */
+
+input[type="submit"] {
+	background: yellow;
+	height: 54px;
+	width: 298px;
+	font-size: 18px;
+}
+
+.post {
+	cursor: pointer;
+}
+
+/* copyrights周辺 */
+.c {
+	padding: 32px 0;
+	width: 100%;
+	background: #707070;
+}
+
+.c p {
+	font-size: 18px;
+	color: white;
+	text-align: center;
+}
+
+/*topへ移動周辺*/
+.position {
+	display: flex;
+}
+
+.another_link {
+	height: 80px;
+	width: 80px;
+	position: relative;
+	left: 100px;
+	bottom: 68px;
+}
+
+.top {
+	height: 80px;
+	width: 80px;
+	border: 3px solid rgb(228, 172, 69);
+	border-top-left-radius: 50%;
+	border-top-right-radius: 50%;
+	position: relative;
+	left: 750px;
+	background: rgb(119, 118, 118);
+}
+/* position fixedのハンバーガーメニュー周辺 */
+.menu_btn {
+	width: 100px;
+	height: 100px;
+	text-align: center;
+	cursor: pointer;
+	position: fixed;
+	top: 10px;
+	right: 10px;
+	
+	z-index: 20;
+}
+.menu_btn:active {
+	opacity: 0.5;
+}
+
+.nav_menu {
+background: rgba(196, 193, 193, 0.7);
+width: 130px;
+border-left: 5px solid black;
+border-right: 5px solid black;
+position: fixed;
+top: 100px;
+right: 10px;
+opacity: 0;
+pointer-events: none;
+transition: opacity .6s;
+}
+
+.nav_menu li {
+	font-family: sans-serif;
+	margin: 14px ;
+	opacity: 0;
+	transform: translateY(16px);
+	transition: opacity .6s, transform .6s;
+}
+.nav_menu li a {
+	color: black;
+}
+
+.show {
+opacity: 1;
+pointer-events: auto;
+z-index: 30;
+}
+
+.show li {
+	opacity: 1;
+	transform: none;
+}
+
+.show li:nth-child(1) {
+	transition-delay: .1s;
+}
+
+.show li:nth-child(2) {
+	transition-delay: .2s;
+}
+
+.show li:nth-child(3) {
+	transition-delay: .3s;
+}
+
+.show li:nth-child(4) {
+	transition-delay: .4s;
+}
+
+.show li:nth-child(5) {
+	transition-delay: .5s;
+}
+
+.mask {
+	background: rgba(0, 0, 0, 0.5);
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	z-index: 23;
+}
+
+/* サイドメニュー */
+.sidemenu {
+	background: rgba(0, 0, 0, 0.5);
+	display: none;
+	border-left: 5px solid orange;
+	border-right: 5px solid orange;
+	margin-left: 10px;
+}
+
+.sidemenu_ul {
+	position: fixed;
+}
+.sidemenu_ul li {
+	margin: 120px 55px;
+ }
+ .sidemenu_ul li a {
+	color: white;
+ }
+
+
+@media (min-width:1300px) {
+	body {
+		display: flex;
+		width: 1200px;
+	}
+	.sidemenu {
+		display: block;
+	}
+	.menu_btn {
+		display: none;
+	}
+}
+
+
+
+/* bodyにborder-left , border-right をつけるとおかしくなる */
+/* textareaの文字がなぜか上下中央に寄る */
+
+
+
+
+
+/*どの部分のcssに対して
+命令をしているのかコメントを
+記載しよう！
+---------------------*/
+
+
+/*
+---------------------*/
+
+
+
+/*
+---------------------*/
+
+
+
+/*
+---------------------*/
+
+
+
+/*
+---------------------*/
+
