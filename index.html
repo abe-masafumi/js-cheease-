@@ -27,7 +27,7 @@
     <!-- ここから記述しよう --> 
     <!-- ■メインビジュアル -->
 
-    <div style="overflow: hidden; padding: 0 10px; border-right: 2px solid black; border-left: 2px solid black;">
+    <div style="overflow: hidden; margin: 0 10px; border-right: 2px solid black; border-left: 2px solid black;">
         <div id="loading" class="center">
     <!-- https://www.youtube.com/embed/<video_id>?autoplay=1&mute=1&playsinline=1&loop=1&playlist=<video_id> -->
         <!-- <iframe src="https://www.youtube.com/embed/watch?v=dcpovLSiY4s" frameborder="0",autoplay=1, mute=1, playsinline=0></iframe> -->
@@ -173,13 +173,16 @@
             </div>
         
             <div class="space_56"></div>
+
             <div class="btn">
-                <button id="btn">
+                <div id="btn">
                     <p>MORE</p>
                     <span class="material-icons">unfold_more</span>
-                </button>
+                </div>
+
             </div>
             <div class="space_48"></div>
+
             <div class="hidden_news" id="hidden_news">
                 <img src="./img/image3.png">
             </div>
@@ -261,7 +264,7 @@
                                 <form action="personal_information.html" method="post">
                                     <dl>
                                         <dt><label>名前</label></dt>
-                                        <dd><input type="text" placeholder="例）地位図　計器" name="name"></dd>
+                                        <dd><input type="text" placeholder="例）地位図　計器"></dd>
                                         <div class="space_24"></div>
                                         <dt><label>カナ</label></dt>
                                         <dd><input type="text"  placeholder="例）チーズ　ケーキ"></dd>
@@ -283,7 +286,7 @@
                                     <div class="space_32"></div>
                                     <dl>
                                         <dt><label>詳細</label></dt>
-                                        <dd><textarea name="" id="" cols="30" rows="10"></textarea>
+                                        <dd><textarea name="" id="" cols="30" rows="10"placeholder="好きなチーズなど" ></textarea>
                                         </dd>
                                     </dl>
                                     <div class="space_40"></div>
@@ -317,6 +320,7 @@
         <div class="menu_btn" id="menu_btn">
             <span class="material-icons" style="font-size: 70px;">menu_open</span>
         </div>
+        
             <ul class="text_center nav_menu" id="nav_menu">
                 <li><a href="#ABOUT">ABOUT</a></li>
                 <li><a href="#COURSE">COURSE</a></li>
@@ -325,6 +329,8 @@
                 <li><a href="#CONTACT">CONTACT</a></li>
             </ul>
         <!-- mask & nav_menu -->
+
+        <!-- 画面を広げた時 -->
     </div>
     <div class="sidemenu">
         <div style="width: 180px;"></div>
@@ -338,7 +344,5 @@
     </div>
     <script src="js/main.js"></script>
 </body>
-<!-- <input type="texterea" style="text-align: initial;"> -->
-
 </html>
 

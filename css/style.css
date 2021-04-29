@@ -36,7 +36,6 @@
 	}
 }
 
-
 body{
 	font-family: Roboto, "Yu Gothic Medium", "游ゴシック Medium", YuGothic, "游ゴシック体", "ヒラギノ角ゴ Pro W3", "メイリオ", sans-serif;
 	line-height: 1.75;
@@ -49,10 +48,7 @@ body{
 	background-size: 960px;
 	user-select: none;
 	background-size: cover;
-	/* border-left: 5px solid orange;
-	border-right: 5px solid orange; */
 }
-
 
 /*　パディングをサイズ内側にする処理　*/
 * {
@@ -209,7 +205,6 @@ h3 {
 	}
 }
 
-
 /* nav setting */
 
 nav {
@@ -276,6 +271,7 @@ flex-direction: row-reverse;
 .news li:nth-child(2) {
 	margin: 0 32px;
 }
+
 /* more button */
 .btn {
 	width: 100%;
@@ -292,9 +288,6 @@ button {
 	height: 60px;
 	width: 300px;
 	font-size: 21px;
-	/* background: rgba(233, 236, 0, 0.5); */
-  /* opacity: 0.5; */
-	/* border-radius: 50%; */
 }
 
 button:active {
@@ -351,7 +344,7 @@ dl dd label,
 dl dd input[type="text"],
 dl dd input[type="texterea"] {
 margin-left: 120px;
-vertical-align: middle;
+vertical-align: center;
 }
 
 input[type="text"] {
@@ -435,12 +428,10 @@ input[type="submit"] {
 .menu_btn {
 	width: 100px;
 	height: 100px;
-	text-align: center;
 	cursor: pointer;
 	position: fixed;
 	top: 10px;
 	right: 10px;
-	
 	z-index: 20;
 }
 .menu_btn:active {
@@ -531,7 +522,6 @@ z-index: 30;
 	color: white;
  }
 
-
 @media (min-width:1300px) {
 	body {
 		display: flex;
@@ -544,37 +534,3 @@ z-index: 30;
 		display: none;
 	}
 }
-
-
-
-/* bodyにborder-left , border-right をつけるとおかしくなる */
-/* textareaの文字がなぜか上下中央に寄る */
-
-
-
-
-
-/*どの部分のcssに対して
-命令をしているのかコメントを
-記載しよう！
----------------------*/
-
-
-/*
----------------------*/
-
-
-
-/*
----------------------*/
-
-
-
-/*
----------------------*/
-
-
-
-/*
----------------------*/
-
